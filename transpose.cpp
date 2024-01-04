@@ -17,16 +17,30 @@ int main()
             cout << "Enter element a" << i + 1 << j + 1 << ": ";
             cin >> a[i][j];
         }
-//   Display to check
-    cout << endl << "Entered Matrix: " << endl;
+  // Displaying the matrix a[][]
+    // cout << endl << "Entered Matrix: " << endl;
+    // for(i = 0; i < r; ++i)
+    //     for(j = 0; j < c; ++j)
+    //     {
+    //         cout << " " << a[i][j];
+    //         if(j == c - 1)
+    //             cout << endl << endl;
+    //     }
+
     for(i = 0; i < r; ++i)
         for(j = 0; j < c; ++j)
         {
-            cout << " " << a[i][j];
-            if(j == c - 1)
-                cout << endl << endl;
+            transpose[j][i] = a[i][j];
         }
 
+    cout << endl << "Transpose of Matrix: " << endl;
+    for(i = 0; i < c; ++i)
+        for(j = 0; j < r; ++j)
+        {
+            cout << " " << transpose[i][j];
+            if(j == r - 1)
+                cout << endl << endl;
+        }
 
   
     return 0;
