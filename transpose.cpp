@@ -17,6 +17,16 @@ int main()
             cout << "Enter element a" << i + 1 << j + 1 << ": ";
             cin >> a[i][j];
         }
+//   Display to check
+    cout << endl << "Entered Matrix: " << endl;
+    for(i = 0; i < r; ++i)
+        for(j = 0; j < c; ++j)
+        {
+            cout << " " << a[i][j];
+            if(j == c - 1)
+                cout << endl << endl;
+        }
+
 
   
     return 0;
