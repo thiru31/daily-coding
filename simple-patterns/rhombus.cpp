@@ -13,9 +13,9 @@ int main()
         {
             cout << " ";
         }
-        for (int j = 1; j <= rows; j++)
+        for (int k = 1; k <= rows; k++)
         {
-            cout << "*";
+            cout << "* ";
         }
         cout << endl;
     }
