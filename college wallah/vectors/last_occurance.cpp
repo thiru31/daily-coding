@@ -5,9 +5,11 @@ using namespace std;
 int main()
 {
     int size, key;
+    cout<<"Enter size of the array :";
     cin >> size;
     cout << "key: ";
     cin >> key;
+    cout<<"Enter "<<size<<" elements of the array :";
     vector<int> arr(size);
     for (int &ip : arr)
     {
@@ -21,5 +23,5 @@ int main()
             j = i;
         }
     }
-    cout << j;
+    cout <<"position :"<< j;
 }
