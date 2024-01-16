@@ -6,8 +6,17 @@ using namespace std;
 
 int main()
 {
-    string arr[] = {"flower", "flight", "flask"};
-    int size = sizeof(arr) / sizeof(arr[0]);
+    int size;
+    cout<<"Enter the size of the array : ";
+    cin >> size;
+    // string arr[] = {"flower", "flight", "flask"};
+    vector<string> arr(size);
+    cout<<"Enter the Strings of the array : ";
+    for (string &ele : arr)
+    {
+        cin >> ele;
+    }
+    // int size = sizeof(arr) / sizeof(arr[0]);
     int i, j, flag = 1;
     int k = 0;
     for (int j = 0; j <= arr[0].size(); j++)
@@ -31,6 +40,7 @@ int main()
             break;
         }
     }
+    cout<<"Largest Common prefix: ";
 
     for (int i = 0; i < k; i++)
     {
