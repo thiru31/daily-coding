@@ -7,7 +7,7 @@ int main()
     int k;
     cout<<"Enter num to check pow of 2 :";
     cin >> k;
-    if (k & (k - 1))
+    if (k & (k - 1) ||k==0)
     {
         cout << "Not power of 2";
     }
