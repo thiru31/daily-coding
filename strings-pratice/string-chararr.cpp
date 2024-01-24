@@ -15,5 +15,9 @@ int main()
     {
         cout<<arr[i]<<" ";
     }
+    //conversion of char arr to string
+    string sample(arr);
+    cout<<sample ;
+
 
 }
