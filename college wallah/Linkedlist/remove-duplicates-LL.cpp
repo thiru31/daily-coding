@@ -61,9 +61,23 @@ public:
             }
             else
             {
-                curr=curr->next;
-                temp=temp->next;
+                curr = curr->next;
+                temp = temp->next;
             }
+        }
+    }
+    void remove_duplicate(node *&head)
+    {
+        node *curr = head;
+        while (curr)
+        {
+            while (curr->next && curr->val == curr->next->val)
+            {
+                curr->next = curr->next->next;
+                node *temp = curr->next;
+                free(temp);
+            }
+            curr = curr->next;
         }
     }
 };
@@ -91,6 +105,7 @@ int main()
     // ll.insert(50);
     // ll.insert(50);
     ll.print();
-    ll.remove_dup();
+    ll.remove_duplicate(ll.head);
+    // ll.remove_dup();
     ll.print();
 }
