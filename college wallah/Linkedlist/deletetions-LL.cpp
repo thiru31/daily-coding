@@ -41,9 +41,28 @@ void delete_at_k(node *&head, int pos)
     }
     node *rnode = temp;
     temp = temp->next;
-    rnode->next=temp->next;
-
+    rnode->next = temp->next;
 }
+
+void delete_at_head(node *&head)
+{
+    node *temp = head;
+    head = temp->next;
+    free(temp);
+}
+
+void delete_tail(node *&head)
+{
+    node *temp = head;
+    while (temp->next->next != NULL)
+    {
+        temp = temp->next;
+    }
+    temp->next = NULL;
+    temp = temp->next;
+    free(temp);
+}
+
 
 int main()
 {
@@ -55,5 +74,9 @@ int main()
     insert(head, 50);
     display(head);
     delete_at_k(head, 4);
+    display(head);
+    delete_at_head(head);
+    display(head);
+    delete_tail(head);
     display(head);
 }
