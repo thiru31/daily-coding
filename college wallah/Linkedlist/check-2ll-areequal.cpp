@@ -69,7 +69,21 @@ void comp_nodes(node *head1, node *head2)
         flag = 0;
     }
 
-    flag == 1 ? cout << "Same" : cout << "not same";
+    flag == 1 ? cout << "Same" <<endl: cout << "not same"<<endl;
+}
+bool _urvi_comp_nodes(node *head1, node *head2)
+{
+
+    while (head1 != NULL && head2 != NULL)
+    {
+        if (head1->val != head2->val)
+        {
+            return false;
+        }
+        head1 = head1->next;
+        head2 = head2->next;
+    }
+    return (head1 == NULL && head2 == NULL);
 }
 
 int main()
@@ -87,4 +101,5 @@ int main()
     list1.display();
     list2.display();
     comp_nodes(list1.head, list2.head);
+    cout<<_urvi_comp_nodes(list1.head, list2.head);
 }
