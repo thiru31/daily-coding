@@ -72,7 +72,7 @@ void del_kth_from_end(node *head, int k)
     free(del);
 }
 
-void del_kth_singletraversal(node *head, int k)
+void del_kth_singletraversal(node *&head, int k)
 {
     node *ptr1 = head;
     node *ptr2 = head;
@@ -82,13 +82,20 @@ void del_kth_singletraversal(node *head, int k)
         ptr2 = ptr2->next;
         count++;
     }
+    if (ptr2 == NULL)
+    {
+        node *temp = head;
+        head = head->next;
+        free(temp);
+        return;
+    }
     while (ptr2->next != NULL)
     {
         ptr2 = ptr2->next;
         ptr1 = ptr1->next;
     }
-    node *del= ptr1->next;
-    ptr1->next=ptr1->next->next;
+    node *del = ptr1->next;
+    ptr1->next = ptr1->next->next;
     free(del);
     // cout << ptr1->val;
     // cout << ptr2->val;
