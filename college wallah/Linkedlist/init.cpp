@@ -23,6 +23,8 @@ int main()
 
 {
     node *n = new node(10);
+    node *n2 = new node(20);
     delete n;
-    cout << n->val << " " << n->next;
+    cout << n->val << " " << n->next<<endl;
+    cout << n2->val << " " << n2->next;
 }
