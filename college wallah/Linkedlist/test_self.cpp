@@ -50,11 +50,25 @@ public:
     }
 };
 
+node *reverse(node *head)
+{
+    if (head->next == NULL)
+    {
+        return head;
+    }
+    node *newhead = reverse(head->next);
+    head->next->next = head;
+    head->next = NULL;
+    return newhead;
+}
+
 int main()
 {
     Linkedlist ll;
     ll.insert(5);
     ll.insert(4);
     ll.insert(3);
+    ll.display();
+    ll.head = reverse(ll.head);
     ll.display();
 }
