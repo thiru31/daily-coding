@@ -68,6 +68,8 @@ int main()
     ll.insert(5);
     ll.insert(4);
     ll.insert(3);
+    ll.insert(2);
+    ll.insert(1);
     ll.display();
     ll.head = reverse(ll.head);
     ll.display();
