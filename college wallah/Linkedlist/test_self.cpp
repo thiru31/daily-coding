@@ -65,7 +65,6 @@ node *reverse(node *head)
 int main()
 {
     Linkedlist ll;
-    ll.insert(5);
     ll.insert(4);
     ll.insert(3);
     ll.insert(2);
