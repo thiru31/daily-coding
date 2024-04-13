@@ -74,20 +74,32 @@ public:
         inorder(root->right);
     }
 };
+int tree_height(node *root)
+{
+    if (root == NULL)
+    {
+        return 0;
+    }
+    int height_left = tree_height(root->left);
+    int height_right = tree_height(root->right);
+
+    return (max(height_left, height_right) + 1);
+}
 
 int main()
 {
     bst b;
     node *root = NULL;
+    b.insert(2);
+    b.insert(1);
+    b.insert(3);
+    // b.insert(4);
     b.insert(5);
-    b.insert(34);
-    b.insert(33);
-    b.insert(6);
-    b.insert(7);
-    b.preorder(b.root);
-    cout<<endl;
-    b.postorder(b.root);
-    cout<<endl;
-    b.inorder(b.root);
+    // b.preorder(b.root);
+    // cout<<endl;
+    // b.postorder(b.root);
+    // cout<<endl;
+    // b.inorder(b.root);
+    cout << tree_height(b.root);
     return 0;
 }
