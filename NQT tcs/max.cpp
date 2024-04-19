@@ -7,5 +7,5 @@ int main()
     int max = *max_element(arr.begin(), arr.end());
     int min = *min_element(arr.begin(), arr.end());
     cout<< max<<endl;
-    cout<< min;
+    cout<< min<<endl;
 }
